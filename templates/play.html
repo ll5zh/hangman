@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman | Play</title>
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #ffe9ce;
+            font-family: 'Tahoma', 'sans-serif';
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            color: white;
+        }
+
+        .title { /* width of Welcome to Hangman: around 34.4rem */
+            font-weight: 800;
+            font-size: 3rem;
+            padding: 2rem;
+            background-color: #ffbe86;
+            text-align: center;
+            border-radius: 2rem;
+        }
+
+        body > * {
+            max-width: 40rem;
+        }
+
+        .instructions {
+            background-color: #2d9099;
+            padding: 2rem;
+            border-radius: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heading {
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .options {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .options > * > * > button {
+            width: 12rem;
+            font-size: 1rem;
+            font-family: inherit;
+            padding: 2rem 1rem;
+            font-weight: 800;
+            color: inherit;
+            border: none;
+            border-radius: 1rem;
+            background-color: #c3719d;
+        }
+
+        a {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Play Hangman!</div>
+</body>
+</html>

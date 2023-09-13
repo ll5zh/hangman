@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman | Home</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+        /* temporary internal css */
+        html, body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #ffe9ce;
+            font-family: 'Tahoma', 'sans-serif';
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            color: white;
+        }
+
+        .title { /* width of Welcome to Hangman: around 34.4rem */
+            font-weight: 800;
+            font-size: 3rem;
+            padding: 2rem;
+            background-color: #ffbe86;
+            text-align: center;
+            border-radius: 2rem;
+        }
+
+        body > * {
+            max-width: 40rem;
+        }
+
+        .instructions {
+            background-color: #2d9099;
+            padding: 2rem;
+            border-radius: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heading {
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .options {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .options > * > * > button {
+            width: 12rem;
+            font-size: 1rem;
+            font-family: inherit;
+            padding: 2rem 1rem;
+            font-weight: 800;
+            color: inherit;
+            border: none;
+            border-radius: 1rem;
+            background-color: #c3719d;
+        }
+
+        a {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Welcome to Hangman!</div>
+    <div class="instructions">
+        <div class="heading">Instructions:</div>
+        <div class="text">You need to guess the hidden word before you end up hanging the Hangman! Guess letters in the word one by one - if you guess correctly, instances of that letter in the word will reveal themselves. If you guess incorrectly, the man will be one step closer to being hung... You have a maximum of 6 incorrect guesses!</div>
+    </div>
+    <div class="options">
+        <div><a href=play/noun><button>Guess a noun!</button></a></div>
+        <div><a href=play/adjective><button>Guess an adjective!</button></a></div>
+        <div><a href=play/verb><button>Guess a verb!</button></a></div>
+        <div><a href=play/random><button>Guess any word!</button></a></div>
+    </div>
+</body>
+</html>
