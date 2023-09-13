@@ -3,9 +3,6 @@ import random
 from hangman_words import word_list
 
 # generate random word for user to guess
-# def get_word(list):
-#    word = random.choice(list)
-#    return word.upper()
 def get_word(category):
     api_url = "https://api.api-ninjas.com/v1/randomword?type=" + category
     response = requests.get(api_url, headers={'X-Api-Key': 'YQO2nUQrfI2ukzfAATOklw==f9q5FyhXvpBQC0mB'})
@@ -17,7 +14,7 @@ def get_word(category):
         return word.upper()
     # if api request fails, return word from word list
     else:
-        word = random.choice(list)
+        word = random.choice(word_list)
         if (category != ""):
             print("At the moment, we cannot get a specific noun/adjective/verb for you. Enjoy playing Hangman with a randomized word!")
         return word.upper()
