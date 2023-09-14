@@ -13,22 +13,35 @@ def home():
 @app.route('/play/noun')
 def play_noun():
     word = get_word('noun')
-    return render_template('play.html', word=word)
+    data = {'word': word, 'category': 'Noun'}
+    return render_template('play.html', data=data)
 
 @app.route('/play/adjective')
 def play_adjective():
     word = get_word('adjective')
-    return render_template('play.html', word=word)
+    data = {'word': word, 'category': 'Adjective'}
+    return render_template('play.html', data=data)
 
 @app.route('/play/verb')
 def play_verb():
     word = get_word('verb')
-    return render_template('play.html', word=word)
+    data = {'word': word, 'category': 'Verb'}
+    return render_template('play.html', data=data)
 
 @app.route('/play/random')
 def play_random():
     word = get_word('')
-    return render_template('play.html', word=word)
+    data = {'word': word, 'category': 'Random'}
+    return render_template('play.html', data=data)
+
+# end of game routes
+@app.route('/win')
+def win():
+    return render_template('win.html')
+
+@app.route('/lose')
+def lose():
+    return render_template('lose.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
