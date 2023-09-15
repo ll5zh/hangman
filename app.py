@@ -35,13 +35,15 @@ def play_random():
     return render_template('play.html', data=data)
 
 # end of game routes
-@app.route('/win')
-def win():
-    return render_template('win.html')
+@app.route('/win/<word>')
+def win(word):
+    data = {'word': word}
+    return render_template('win.html', data=data)
 
-@app.route('/lose')
-def lose():
-    return render_template('lose.html')
+@app.route('/lose/<word>')
+def lose(word):
+    data = {'word': word}
+    return render_template('lose.html', data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)
