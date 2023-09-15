@@ -30,8 +30,6 @@ LetterInterface.createLetters();
 const wordContainer = document.querySelector('.word');
 
 const WordDisplay = (() => {
-    // const word is defined
-    // based on length, create empty character for each (_)
     const length = word.length;
     const wordChars = wordContainer.children;
     const createDisplay = () => {
@@ -43,8 +41,7 @@ const WordDisplay = (() => {
         }
     };
 
-    // function to update display, takes in character.
-    // - loop through word, check indices it has, update those indices of characters in display
+    // function to update display, takes in most recent character
     const updateDisplay = (letter) => {
         for (let i = 0; i < length; ++i) {
             if (word[i] == letter) {
@@ -77,14 +74,11 @@ WordDisplay.createDisplay();
 const img = document.querySelector('img');
 
 const Gameplay = (() => {
-    // track variables
     let tries = 6;
     let isPlaying = true;
     let guessedLetters = [];
     const hangmans = [
-        // 0 = no tries left
-        // 1 = 1 try left
-        // 6 = 6 tries left
+        // position in array corresponds to number of tries
         'https://www.oligalma.com/downloads/images/hangman/hangman/10.jpg',
         'https://www.oligalma.com/downloads/images/hangman/hangman/9.jpg',
         'https://www.oligalma.com/downloads/images/hangman/hangman/8.jpg',
@@ -93,10 +87,7 @@ const Gameplay = (() => {
         'https://www.oligalma.com/downloads/images/hangman/hangman/5.jpg',
         'https://www.oligalma.com/downloads/images/hangman/hangman/4.jpg',
     ]
-    // function that takes in a letter, the button DOM, activates gameplay.
-    // - if button has given class for guessed, then it has been guessed. do nothing
-    // - if correct, update the display. call update display
-    // - update tries, update class for button.
+    // function that takes in a letter, its button, activates gameplay
     const playRound = (letter, key) => {
         if (!isPlaying) {
             return;
