@@ -107,9 +107,10 @@ const Gameplay = (() => {
             isPlaying = false;
             const redirect = document.createElement('div');
             redirect.classList.add('loser');
-            redirect.innerHTML = `
-            <a href=../lose><button style="padding: 0.7rem 1rem; border: none; font-family: inherit; font-size: 0.8rem; color: white; background-color: #c5a3d2; font-weight: 800; border-radius: 0.7rem; width: 11.3rem;">Game Over: Click Here</button></a>
-            `;
+            const link = document.createElement('a');
+            link.href = `../lose/${word}`;
+            link.innerHTML = `<button style="padding: 0.7rem 1rem; border: none; font-family: inherit; font-size: 0.8rem; color: white; background-color: #c5a3d2; font-weight: 800; border-radius: 0.7rem; width: 11.3rem;">Game Over: Click Here</button>`;
+            redirect.appendChild(link);
             const wordContain = document.querySelector('.word-contain');
             wordContain.appendChild(redirect);
         }
@@ -117,9 +118,13 @@ const Gameplay = (() => {
             isPlaying = false;
             const redirect = document.createElement('div');
             redirect.classList.add('winner');
-            redirect.innerHTML = `
-            <a href=../win><button style="padding: 0.7rem 1rem; border: none; font-family: inherit; font-size: 0.8rem; color: white; background-color: #c5a3d2; font-weight: 800; border-radius: 0.7rem; width: 11.3rem;">Game Over: Click Here</button></a>
-            `;
+            // redirect.innerHTML = `
+            //<a href=../win/{{word}}><button style="padding: 0.7rem 1rem; border: none; font-family: inherit; font-size: 0.8rem; color: white; background-color: #c5a3d2; font-weight: 800; border-radius: 0.7rem; width: 11.3rem;">Game Over: Click Here</button></a>
+            //`;
+            const link = document.createElement('a');
+            link.href = `../win/${word}`;
+            link.innerHTML = `<button style="padding: 0.7rem 1rem; border: none; font-family: inherit; font-size: 0.8rem; color: white; background-color: #c5a3d2; font-weight: 800; border-radius: 0.7rem; width: 11.3rem;">Game Over: Click Here</button>`;
+            redirect.appendChild(link);
             const wordContain = document.querySelector('.word-contain');
             wordContain.appendChild(redirect);
         }
