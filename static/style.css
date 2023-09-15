@@ -69,3 +69,58 @@ a {
     font-weight: 800;
     margin-top: -1rem;
 }
+
+.display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.display > img {
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+.word {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: nowrap;
+}
+
+.char {
+    width: 3rem;
+    height: 3rem;
+    background-color: #b0888a;
+    color: white;
+    font-weight: 800;
+    border: none;
+    border-radius: 1rem;
+}
+
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.letters > button {
+    background-color: #c3719d;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 800;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.word-contain {
+    position: relative;
+}
+
+.loser, .winner {
+    margin-top: 0.7rem;
+    position: absolute;
+}
