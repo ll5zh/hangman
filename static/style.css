@@ -61,6 +61,13 @@ a {
     color: inherit;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .category {
     background-color: #2d9099;
     padding: 1rem;
@@ -68,6 +75,18 @@ a {
     text-align: center;
     font-weight: 800;
     margin-top: -1rem;
+}
+
+.back {
+    background-color: #2d9099;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-weight: 800;
+    border: none;
+    margin-top: -1rem;
+    font-size: inherit;
+    color: inherit;
 }
 
 .display {
