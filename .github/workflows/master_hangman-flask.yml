@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'hangman-flask'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F94D58234724493FB8877677FEE466B9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19F38800C618445EAB9EC8A92847E656 }}
