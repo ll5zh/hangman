@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman | Lose</title>
     <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='result.css')}}">
+    <script type="text/javascript" defer>
+        const word = '{{ data.word }}';
+    </script>
+    <script src="{{url_for('static', filename='result.js')}}" defer></script>
 </head>
 <body>
     <div class="title">☹ You Lose! ☹</div>
